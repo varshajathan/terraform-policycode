@@ -1,0 +1,12 @@
+// file: cost-control.sentinel
+
+import "tfplan"
+
+main = rule {
+  all_resources_cost_less_than_500(tfplan.resources)
+}
+
+all_resources_cost_less_than_500 = func(resources) {
+  # Dummy placeholder: in real usage you'd fetch tags or instance types to estimate cost
+  true  # You'd write actual logic here using tfplan data
+}
